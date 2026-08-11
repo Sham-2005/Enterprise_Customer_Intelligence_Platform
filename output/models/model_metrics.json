@@ -1,0 +1,55 @@
+{
+    "best_model_name": "Random Forest",
+    "best_roc_auc": 1.0,
+    "feature_names": [
+        "total_spending",
+        "total_orders",
+        "avg_order_value",
+        "recency_days",
+        "historical_clv",
+        "avg_review_score_given",
+        "distinct_categories_count",
+        "loyalty_score",
+        "avg_freight_cost",
+        "is_repeat_customer",
+        "purchase_frequency_monthly"
+    ],
+    "benchmark_results": [
+        {
+            "Model": "Logistic Regression",
+            "Accuracy": 0.9923,
+            "Precision": 0.9999,
+            "Recall": 0.9907,
+            "F1 Score": 0.9952,
+            "ROC-AUC": 1.0,
+            "PR-AUC": 1.0
+        },
+        {
+            "Model": "Random Forest",
+            "Accuracy": 1.0,
+            "Precision": 1.0,
+            "Recall": 1.0,
+            "F1 Score": 1.0,
+            "ROC-AUC": 1.0,
+            "PR-AUC": 1.0
+        },
+        {
+            "Model": "XGBoost",
+            "Accuracy": 1.0,
+            "Precision": 1.0,
+            "Recall": 1.0,
+            "F1 Score": 1.0,
+            "ROC-AUC": 1.0,
+            "PR-AUC": 1.0
+        },
+        {
+            "Model": "LightGBM",
+            "Accuracy": 0.9988,
+            "Precision": 0.9997,
+            "Recall": 0.9988,
+            "F1 Score": 0.9993,
+            "ROC-AUC": 1.0,
+            "PR-AUC": 1.0
+        }
+    ]
+}

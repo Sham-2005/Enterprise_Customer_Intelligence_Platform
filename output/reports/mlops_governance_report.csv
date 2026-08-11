@@ -1,0 +1,6 @@
+Model Name,Active Version,Algorithm,Metrics,Status,Owner
+CustomerSegmentation,v1.0,K-Means & PCA,"{'Silhouette': 0.385, 'Calinski-Harabasz': 1420.5}",Active,ECIP-MLOps-Team
+ChurnClassifier,v1.0,XGBoost Classifier with SMOTE,"{'ROC-AUC': 0.942, 'F1-Score': 0.885, 'Precision': 0.892, 'Recall': 0.878}",Active,ECIP-MLOps-Team
+CLVRegressor,v1.0,XGBoost Regressor,"{'R2_Score': 0.915, 'MAE': 42.5, 'RMSE': 68.2}",Active,ECIP-MLOps-Team
+HybridRecommender,v1.0,Collaborative Cosine + Content TF-IDF,"{'Precision@10': 0.285, 'Recall@10': 0.412, 'MAP@10': 0.315, 'Coverage_Pct': 84.5}",Active,ECIP-MLOps-Team
+MarketBasketMining,v1.0,FP-Growth & Association Rules,"{'Avg_Lift': 2.45, 'Avg_Confidence': 0.68, 'Discovered_Rules': 142}",Active,ECIP-MLOps-Team

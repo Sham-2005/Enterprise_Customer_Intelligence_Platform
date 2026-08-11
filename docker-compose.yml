@@ -1,0 +1,35 @@
+version: '3.8'
+
+services:
+  fastapi_backend:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: ecip_backend
+    ports:
+      - "8000:8000"
+    environment:
+      - ENVIRONMENT=production
+      - LOG_LEVEL=INFO
+      - DATABASE_URL=sqlite:///output/ecip.db
+    volumes:
+      - ./output:/app/output
+      - ./data_set:/app/data_set
+    restart: always
+
+  streamlit_dashboard:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: ecip_dashboard
+    command: python run_dashboard.py
+    ports:
+      - "8501:8501"
+    environment:
+      - ENVIRONMENT=production
+      - BACKEND_API_URL=http://fastapi_backend:8000
+    volumes:
+      - ./output:/app/output
+    depends_on:
+      - fastapi_backend
+    restart: always

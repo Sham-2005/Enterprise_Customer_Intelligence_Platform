@@ -1,0 +1,32 @@
+{
+    "overall_drift_detected": false,
+    "drifted_features_count": 0,
+    "drifted_features": [],
+    "feature_metrics": {
+        "recency_days": {
+            "ks_statistic": 0.0038,
+            "p_value": 0.8728,
+            "drift_detected": false
+        },
+        "total_spending": {
+            "ks_statistic": 0.0041,
+            "p_value": 0.8236,
+            "drift_detected": false
+        },
+        "total_orders": {
+            "ks_statistic": 0.0009,
+            "p_value": 1.0,
+            "drift_detected": false
+        },
+        "avg_order_value": {
+            "ks_statistic": 0.0056,
+            "p_value": 0.4422,
+            "drift_detected": false
+        },
+        "avg_review_score_given": {
+            "ks_statistic": 0.0037,
+            "p_value": 0.8966,
+            "drift_detected": false
+        }
+    }
+}

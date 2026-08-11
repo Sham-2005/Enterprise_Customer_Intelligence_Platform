@@ -1,0 +1,31 @@
+# Power BI Enterprise Embed Configuration for ECIP Platform
+reports:
+  executive:
+    title: "Executive Summary Dashboard"
+    embed_url: "" # Insert Power BI Service Iframe Embed URL here
+    web_url: "https://app.powerbi.com/groups/me/reports/sample-executive"
+    description: "C-suite high-level revenue trajectory, gross margin, and executive KPI summary."
+
+  customer:
+    title: "Customer Analytics & Demographics"
+    embed_url: "" # Insert Power BI Service Iframe Embed URL here
+    web_url: "https://app.powerbi.com/groups/me/reports/sample-customer"
+    description: "Geographic buyer concentration, repeat buyer rates, and customer acquisition cohorts."
+
+  sales:
+    title: "Sales & Revenue Performance"
+    embed_url: "" # Insert Power BI Service Iframe Embed URL here
+    web_url: "https://app.powerbi.com/groups/me/reports/sample-sales"
+    description: "Revenue breakdown by payment type, installment plan, and seasonal order volumes."
+
+  product:
+    title: "Product Catalog & Merchandising"
+    embed_url: "" # Insert Power BI Service Iframe Embed URL here
+    web_url: "https://app.powerbi.com/groups/me/reports/sample-product"
+    description: "Pareto 80/20 category revenue analysis, freight cost impact, and SKU velocity."
+
+  ai_analytics:
+    title: "AI Risk & Predictive Analytics"
+    embed_url: "" # Insert Power BI Service Iframe Embed URL here
+    web_url: "https://app.powerbi.com/groups/me/reports/sample-ai"
+    description: "Churn risk distributions, 12M CLV value tiering, and market basket association rules."

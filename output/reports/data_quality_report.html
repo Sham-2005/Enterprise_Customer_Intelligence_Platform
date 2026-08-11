@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>ECIP - Data Quality & Feature Store Report</title>
+    <style>
+        body { font-family: 'Segoe UI', Arial, sans-serif; background: #0f172a; color: #f8fafc; margin: 0; padding: 30px; }
+        h1, h2 { color: #38bdf8; font-weight: 600; }
+        .metric-card { background: #1e293b; padding: 20px; border-radius: 12px; display: inline-block; margin-right: 20px; margin-bottom: 20px; border: 1px solid #334155; }
+        .metric-value { font-size: 32px; font-weight: bold; color: #4ade80; }
+        .metric-label { color: #94a3b8; font-size: 14px; text-transform: uppercase; }
+        .styled-table { width: 100%; border-collapse: collapse; margin: 25px 0; font-size: 14px; text-align: left; background: #1e293b; border-radius: 8px; overflow: hidden; }
+        .styled-table th { background-color: #0284c7; color: #ffffff; padding: 12px 15px; }
+        .styled-table td { padding: 12px 15px; border-bottom: 1px solid #334155; color: #e2e8f0; }
+        .styled-table tr:nth-of-type(even) { background-color: #1e293b; }
+        .styled-table tr:nth-of-type(odd) { background-color: #0f172a; }
+    </style>
+</head>
+<body>
+    <h1>Enterprise Customer Intelligence Platform (ECIP)</h1>
+    <h2>Automated Data Quality & Feature Store Audit Report</h2>
+    <hr style="border-color: #334155; margin-bottom: 30px;">
+
+    <div>
+        <div class="metric-card">
+            <div class="metric-label">Data Quality Score</div>
+            <div class="metric-value">45.79%</div>
+        </div>
+        <div class="metric-card">
+            <div class="metric-label">Processed Customers</div>
+            <div class="metric-value">95,420</div>
+        </div>
+        <div class="metric-card">
+            <div class="metric-label">Engineered Features</div>
+            <div class="metric-value">29</div>
+        </div>
+    </div>
+
+    <h2>Raw Dataset Ingestion Audit</h2>
+    <table border="1" class="dataframe styled-table">
+  <thead>
+    <tr style="text-align: right;">
+      <th>Dataset</th>
+      <th>Rows</th>
+      <th>Columns</th>
+      <th>Duplicate Rows</th>
+      <th>Missing Cells</th>
+      <th>Duplicate Rate (%)</th>
+      <th>Missing Cell Rate (%)</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>customers</td>
+      <td>99441</td>
+      <td>5</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0.00</td>
+      <td>0.00</td>
+    </tr>
+    <tr>
+      <td>orders</td>
+      <td>99441</td>
+      <td>8</td>
+      <td>0</td>
+      <td>4908</td>
+      <td>0.00</td>
+      <td>0.62</td>
+    </tr>
+    <tr>
+      <td>order_items</td>
+      <td>112650</td>
+      <td>7</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0.00</td>
+      <td>0.00</td>
+    </tr>
+    <tr>
+      <td>products</td>
+      <td>32951</td>
+      <td>9</td>
+      <td>0</td>
+      <td>2448</td>
+      <td>0.00</td>
+      <td>0.83</td>
+    </tr>
+    <tr>
+      <td>payments</td>
+      <td>103886</td>
+      <td>5</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0.00</td>
+      <td>0.00</td>
+    </tr>
+    <tr>
+      <td>reviews</td>
+      <td>99224</td>
+      <td>7</td>
+      <td>0</td>
+      <td>145903</td>
+      <td>0.00</td>
+      <td>21.01</td>
+    </tr>
+    <tr>
+      <td>sellers</td>
+      <td>3095</td>
+      <td>4</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0.00</td>
+      <td>0.00</td>
+    </tr>
+    <tr>
+      <td>geolocation</td>
+      <td>1000163</td>
+      <td>5</td>
+      <td>261831</td>
+      <td>0</td>
+      <td>26.18</td>
+      <td>0.00</td>
+    </tr>
+    <tr>
+      <td>category_translation</td>
+      <td>71</td>
+      <td>2</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0.00</td>
+      <td>0.00</td>
+    </tr>
+  </tbody>
+</table>
+
+    <h2>Feature Store Sample Metrics (First 15 Features)</h2>
+    <table border="1" class="dataframe styled-table">
+  <thead>
+    <tr style="text-align: right;">
+      <th>Feature Name</th>
+      <th>Data Type</th>
+      <th>Null Count</th>
+      <th>Unique Values</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>customer_unique_id</td>
+      <td>str</td>
+      <td>0</td>
+      <td>95420</td>
+    </tr>
+    <tr>
+      <td>total_orders</td>
+      <td>int64</td>
+      <td>0</td>
+      <td>9</td>
+    </tr>
+    <tr>
+      <td>total_items_purchased</td>
+      <td>int64</td>
+      <td>0</td>
+      <td>20</td>
+    </tr>
+    <tr>
+      <td>total_spending</td>
+      <td>float64</td>
+      <td>0</td>
+      <td>8617</td>
+    </tr>
+    <tr>
+      <td>total_freight_paid</td>
+      <td>float64</td>
+      <td>0</td>
+      <td>8609</td>
+    </tr>
+    <tr>
+      <td>avg_order_value</td>
+      <td>float64</td>
+      <td>0</td>
+      <td>8239</td>
+    </tr>
+    <tr>
+      <td>avg_review_score_given</td>
+      <td>float64</td>
+      <td>0</td>
+      <td>65</td>
+    </tr>
+    <tr>
+      <td>first_purchase_date</td>
+      <td>datetime64[us]</td>
+      <td>0</td>
+      <td>95163</td>
+    </tr>
+    <tr>
+      <td>last_purchase_date</td>
+      <td>datetime64[us]</td>
+      <td>0</td>
+      <td>95161</td>
+    </tr>
+    <tr>
+      <td>distinct_categories_count</td>
+      <td>int64</td>
+      <td>0</td>
+      <td>5</td>
+    </tr>
+    <tr>
+      <td>customer_state</td>
+      <td>str</td>
+      <td>0</td>
+      <td>27</td>
+    </tr>
+    <tr>
+      <td>customer_city</td>
+      <td>str</td>
+      <td>0</td>
+      <td>4109</td>
+    </tr>
+    <tr>
+      <td>preferred_payment_method</td>
+      <td>str</td>
+      <td>0</td>
+      <td>5</td>
+    </tr>
+    <tr>
+      <td>recency_days</td>
+      <td>float64</td>
+      <td>0</td>
+      <td>95161</td>
+    </tr>
+    <tr>
+      <td>customer_age_days</td>
+      <td>float64</td>
+      <td>0</td>
+      <td>95163</td>
+    </tr>
+  </tbody>
+</table>
+
+    <p style="color: #64748b; margin-top: 40px;">Report auto-generated by ECIP QualityReporter Engine.</p>
+</body>
+</html>

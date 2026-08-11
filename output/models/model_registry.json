@@ -1,0 +1,142 @@
+{
+    "registered_models": {
+        "CustomerSegmentation": {
+            "active_version": "v1.0",
+            "versions": {
+                "v1.0": {
+                    "model_name": "CustomerSegmentation",
+                    "version": "v1.0",
+                    "algorithm": "K-Means & PCA",
+                    "registration_date": "2026-08-08 18:07:24",
+                    "metrics": {
+                        "Silhouette": 0.385,
+                        "Calinski-Harabasz": 1420.5
+                    },
+                    "features": [
+                        "total_spending",
+                        "total_orders",
+                        "recency_days",
+                        "loyalty_score"
+                    ],
+                    "hyperparameters": {
+                        "n_clusters": 5,
+                        "random_state": 42
+                    },
+                    "status": "Active",
+                    "owner": "ECIP-MLOps-Team"
+                }
+            }
+        },
+        "ChurnClassifier": {
+            "active_version": "v1.0",
+            "versions": {
+                "v1.0": {
+                    "model_name": "ChurnClassifier",
+                    "version": "v1.0",
+                    "algorithm": "XGBoost Classifier with SMOTE",
+                    "registration_date": "2026-08-08 18:07:24",
+                    "metrics": {
+                        "ROC-AUC": 0.942,
+                        "F1-Score": 0.885,
+                        "Precision": 0.892,
+                        "Recall": 0.878
+                    },
+                    "features": [
+                        "recency_days",
+                        "total_orders",
+                        "avg_review_score_given",
+                        "total_spending"
+                    ],
+                    "hyperparameters": {
+                        "n_estimators": 100,
+                        "scale_pos_weight": 3.2
+                    },
+                    "status": "Active",
+                    "owner": "ECIP-MLOps-Team"
+                }
+            }
+        },
+        "CLVRegressor": {
+            "active_version": "v1.0",
+            "versions": {
+                "v1.0": {
+                    "model_name": "CLVRegressor",
+                    "version": "v1.0",
+                    "algorithm": "XGBoost Regressor",
+                    "registration_date": "2026-08-08 18:07:24",
+                    "metrics": {
+                        "R2_Score": 0.915,
+                        "MAE": 42.5,
+                        "RMSE": 68.2
+                    },
+                    "features": [
+                        "total_spending",
+                        "purchase_velocity",
+                        "spending_trend",
+                        "loyalty_score"
+                    ],
+                    "hyperparameters": {
+                        "n_estimators": 100,
+                        "learning_rate": 0.05
+                    },
+                    "status": "Active",
+                    "owner": "ECIP-MLOps-Team"
+                }
+            }
+        },
+        "HybridRecommender": {
+            "active_version": "v1.0",
+            "versions": {
+                "v1.0": {
+                    "model_name": "HybridRecommender",
+                    "version": "v1.0",
+                    "algorithm": "Collaborative Cosine + Content TF-IDF",
+                    "registration_date": "2026-08-08 18:07:24",
+                    "metrics": {
+                        "Precision@10": 0.285,
+                        "Recall@10": 0.412,
+                        "MAP@10": 0.315,
+                        "Coverage_Pct": 84.5
+                    },
+                    "features": [
+                        "user_item_matrix",
+                        "product_category_text"
+                    ],
+                    "hyperparameters": {
+                        "collab_weight": 0.4,
+                        "content_weight": 0.4,
+                        "popularity_weight": 0.2
+                    },
+                    "status": "Active",
+                    "owner": "ECIP-MLOps-Team"
+                }
+            }
+        },
+        "MarketBasketMining": {
+            "active_version": "v1.0",
+            "versions": {
+                "v1.0": {
+                    "model_name": "MarketBasketMining",
+                    "version": "v1.0",
+                    "algorithm": "FP-Growth & Association Rules",
+                    "registration_date": "2026-08-08 18:07:24",
+                    "metrics": {
+                        "Avg_Lift": 2.45,
+                        "Avg_Confidence": 0.68,
+                        "Discovered_Rules": 142
+                    },
+                    "features": [
+                        "order_item_matrix"
+                    ],
+                    "hyperparameters": {
+                        "min_support": 0.005,
+                        "min_threshold": 1.0
+                    },
+                    "status": "Active",
+                    "owner": "ECIP-MLOps-Team"
+                }
+            }
+        }
+    },
+    "last_updated": "2026-08-08T18:07:24.987657"
+}

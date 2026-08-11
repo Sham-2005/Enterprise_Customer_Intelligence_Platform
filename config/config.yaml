@@ -1,0 +1,51 @@
+# Enterprise Customer Intelligence Platform (ECIP) Configuration
+
+app:
+  name: "Enterprise Customer Intelligence Platform"
+  version: "1.0.0"
+  environment: "development" # development | staging | production
+  debug: true
+
+paths:
+  dataset_dir: "data_set"
+  output_dir: "output"
+  models_dir: "output/models"
+  predictions_dir: "output/predictions"
+  reports_dir: "output/reports"
+  logs_dir: "output/logs"
+
+dataset_files:
+  customers: "olist_customers_dataset.csv"
+  orders: "olist_orders_dataset.csv"
+  order_items: "olist_order_items_dataset.csv"
+  products: "olist_products_dataset.csv"
+  payments: "olist_order_payments_dataset.csv"
+  reviews: "olist_order_reviews_dataset.csv"
+  sellers: "olist_sellers_dataset.csv"
+  geolocation: "olist_geolocation_dataset.csv"
+  category_translation: "product_category_name_translation.csv"
+
+logging:
+  level: "INFO"
+  format: "%(asctime)s - %(name)s - %(levelname)s - %(message)s"
+  file_name: "ecip.log"
+
+api:
+  host: "0.0.0.0"
+  port: 8000
+  reload: true
+
+dashboard:
+  port: 8501
+  theme: "dark"
+
+analytics:
+  rfm:
+    recency_bins: 5
+    frequency_bins: 5
+    monetary_bins: 5
+  churn:
+    inactivity_threshold_days: 90
+  market_basket:
+    min_support: 0.01
+    min_threshold: 0.1

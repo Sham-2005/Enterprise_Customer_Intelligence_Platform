@@ -1,0 +1,4 @@
+Algorithm,Clusters Found,Silhouette Score,Davies-Bouldin Index,Calinski-Harabasz Index
+K-Means,4,0.5091,0.7424,4098.48
+Gaussian Mixture (GMM),4,0.0774,3.8138,536.88
+DBSCAN,37,-0.309,1.5771,96.54

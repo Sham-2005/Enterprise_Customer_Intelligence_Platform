@@ -1,0 +1,34 @@
+[
+    {
+        "run_id": "run_fa6ad597",
+        "timestamp": "2026-08-08 18:07:24",
+        "model_name": "ChurnClassifier",
+        "dataset_version": "v1.0",
+        "hyperparameters": {
+            "n_estimators": 100,
+            "scale_pos_weight": 3.2
+        },
+        "metrics": {
+            "ROC-AUC": 0.942,
+            "F1-Score": 0.885
+        },
+        "duration_seconds": 14.2,
+        "notes": "Baseline SMOTE XGBoost run"
+    },
+    {
+        "run_id": "run_1880b4e9",
+        "timestamp": "2026-08-08 18:07:24",
+        "model_name": "CLVRegressor",
+        "dataset_version": "v1.0",
+        "hyperparameters": {
+            "n_estimators": 100,
+            "learning_rate": 0.05
+        },
+        "metrics": {
+            "R2_Score": 0.915,
+            "MAE": 42.5
+        },
+        "duration_seconds": 18.5,
+        "notes": "Baseline XGBoost Regressor run"
+    }
+]

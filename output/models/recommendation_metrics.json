@@ -1,0 +1,6 @@
+{
+    "Precision@10": 0.285,
+    "Recall@10": 0.412,
+    "MAP@10": 0.315,
+    "Catalog Coverage (%)": 84.5
+}

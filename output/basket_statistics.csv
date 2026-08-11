@@ -1,0 +1,2 @@
+total_transactions,unique_categories,frequent_itemsets_count,association_rules_count,avg_lift,avg_confidence
+98666,74,22,0,0.0,0.0

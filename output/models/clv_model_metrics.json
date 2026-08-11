@@ -1,0 +1,53 @@
+{
+    "best_model_name": "Linear Regression",
+    "best_r2_score": 1.0,
+    "feature_names": [
+        "total_spending",
+        "total_orders",
+        "avg_order_value",
+        "recency_days",
+        "historical_clv",
+        "avg_review_score_given",
+        "distinct_categories_count",
+        "loyalty_score",
+        "avg_freight_cost",
+        "purchase_velocity",
+        "spending_trend",
+        "engagement_score",
+        "category_diversity_index"
+    ],
+    "benchmark_results": [
+        {
+            "Model": "Linear Regression",
+            "MAE ($)": 0.0,
+            "RMSE ($)": 0.0,
+            "R\u00b2 Score": 1.0,
+            "MAPE (%)": 0.0,
+            "Explained Variance": 1.0
+        },
+        {
+            "Model": "Random Forest Regressor",
+            "MAE ($)": 3.17,
+            "RMSE ($)": 78.23,
+            "R\u00b2 Score": 0.9951,
+            "MAPE (%)": 0.23,
+            "Explained Variance": 0.9951
+        },
+        {
+            "Model": "XGBoost Regressor",
+            "MAE ($)": 16.38,
+            "RMSE ($)": 265.91,
+            "R\u00b2 Score": 0.943,
+            "MAPE (%)": 1.82,
+            "Explained Variance": 0.943
+        },
+        {
+            "Model": "LightGBM Regressor",
+            "MAE ($)": 15.51,
+            "RMSE ($)": 183.81,
+            "R\u00b2 Score": 0.9728,
+            "MAPE (%)": 2.38,
+            "Explained Variance": 0.9728
+        }
+    ]
+}

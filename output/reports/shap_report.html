@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>ECIP - SHAP Model Explainability Report</title>
+    <style>
+        body { font-family: 'Segoe UI', Arial, sans-serif; background: #0f172a; color: #f8fafc; padding: 30px; }
+        h1, h2 { color: #38bdf8; }
+        .card { background: #1e293b; padding: 20px; border-radius: 12px; border: 1px solid #334155; margin-bottom: 20px; }
+    </style>
+</head>
+<body>
+    <h1>Enterprise Customer Intelligence Platform (ECIP)</h1>
+    <h2>SHAP Explainable AI (XAI) Global Diagnostic Report</h2>
+    <hr style="border-color: #334155;">
+
+    <div class="card">
+        <h3>Global Feature Drivers for Churn Prediction</h3>
+        <p>Key behavioral metrics driving model predictions in order of global feature attribution impact:</p>
+        <ul>
+            <li><b>recency_days</b>: Primary positive driver of customer churn.</li>
+            <li><b>total_orders</b>: Primary protective factor against customer churn.</li>
+            <li><b>avg_review_score_given</b>: High satisfaction strongly reduces churn risk.</li>
+            <li><b>total_spending</b>: Monetary loyalty correlates with customer retention.</li>
+        </ul>
+    </div>
+</body>
+</html>

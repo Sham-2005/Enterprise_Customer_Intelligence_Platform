@@ -1,0 +1,8 @@
+{
+    "total_transactions": 98666,
+    "unique_categories": 74,
+    "frequent_itemsets_count": 22,
+    "association_rules_count": 0,
+    "avg_lift": 0.0,
+    "avg_confidence": 0.0
+}
