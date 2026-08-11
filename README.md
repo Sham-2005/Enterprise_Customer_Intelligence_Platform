@@ -5,7 +5,9 @@
 ![FastAPI](https://img.shields.io/badge/FastAPI-0.110.0-009688.svg)
 ![Streamlit](https://img.shields.io/badge/Streamlit-1.32.0-FF4B4B.svg)
 ![Docker](https://img.shields.io/badge/Docker-Ready-2496ED.svg)
-App Link: https://enterprisecustomerintelligenceplatform-nbbqhzaxke7erve6dw5rqs.streamlit.app/
+
+**App Link: https://enterprisecustomerintelligenceplatform-nbbqhzaxke7erve6dw5rqs.streamlit.app/**
+
 **Enterprise Customer Intelligence Platform (ECIP)** is a production-grade, AI-powered customer analytics, lifetime value forecasting, churn prediction, recommendation engine, market basket analysis, and MLOps governance platform built for retail and e-commerce enterprises (similar to Amazon, Shopify, Flipkart, and Walmart).
 
 ---
